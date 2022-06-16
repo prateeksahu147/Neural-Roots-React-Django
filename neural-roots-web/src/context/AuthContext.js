@@ -1,6 +1,6 @@
 import {createContext, useState, useEffect,React} from 'react';
 import jwt_decode from "jwt-decode";
-import { useLocation, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext()
 
@@ -43,7 +43,7 @@ export const AuthProvider = ({children}) => {
     let logOutUser = () =>{
         setAuthTokens(null)
         setUser(null)
-        localStorage.removeItem('authTokens')
+        //localStorage.removeItem('authTokens')
         navigate('/login/')
     }
 

@@ -5,8 +5,8 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 
 from .serializers import NoteSerializer
-from neural_roots_workspace.models import Note
 from rest_framework.permissions import IsAuthenticated
+
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
@@ -35,5 +35,5 @@ def getRoutes(request):
 def getNotes(request):
     user = request.user
     notes = user.note_set.all()
-    serializer  = NoteSerializer(notes, many = True)
+    serializer = NoteSerializer(notes, many=True)
     return Response(serializer.data)

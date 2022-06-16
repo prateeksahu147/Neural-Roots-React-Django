@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from neural_roots_workspace.models  import Note
+from neural_roots_workspace.models.Todo.Todo  import Note
 
 class NoteSerializer(ModelSerializer):
     class Meta:

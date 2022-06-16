@@ -6,6 +6,8 @@ import Workspace from './pages/neural-roots-workspace/Workspace';
 import LoginPage from './pages/neural-roots-workspace/LoginPage';
 import PrivateRoute from './utils/PrivateRoute';
 import {AuthProvider} from './context/AuthContext';
+import Dashboard from './pages/neural-roots-workspace/DashboardPage';
+import "./styles/WorkspaceStyle.css";
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
       <Routes>
         <Route element = {<LoginPage />} path = "/login"/>  
         <Route element= {<PrivateRoute/>}>
-          <Route exact path="/workspace/" element = {<Workspace />} /> 
+          <Route path="workspace" element = {<Workspace />}> 
+            <Route path="dashboard" element ={<Dashboard />}/>
+          </Route>
         </Route>
       </Routes>
     </AuthProvider>

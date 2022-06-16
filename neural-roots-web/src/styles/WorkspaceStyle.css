@@ -1,0 +1,124 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: rgb(251, 251, 251);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .sidebar label{
+    padding: 20px;
+    margin: auto;
+  }
+
+  .sidebar Button{
+    padding: 16px;
+    margin-top: 400px;
+
+  }
+  .sidebar #menu {
+    display: block;
+    color: #555;
+    padding: 16px;
+    text-decoration: none;
+  }
+  .sidebar #logout{
+    display: block;
+    color: #555;
+    padding: 20px;
+    text-decoration:none;
+    margin-top: 400px;
+    background-color: whitesmoke;
+  }
+  
+  .sidebar #menu.active {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  .sidebar #menu:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+
+  #dropdown-menu {
+    display: none;
+  }
+
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  #top-navbar{
+    display: none;
+  }
+  
+  @media screen and (max-width: 700px) {
+  
+    .sidebar{
+      display: none;
+    }
+    #mini-logo{
+      height: 60px;
+    }
+    #menu {
+      display: block;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+    }
+    #toggle{
+      padding: 0;
+      margin: 0;
+      display: block;
+      float: right;
+    }
+    #top-navbar{
+      display:contents;
+    }
+
+    div.content 
+    {
+      margin-left: 0px;
+      margin-top: 40px;
+    }
+
+    .sidebar #menu:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar #menu {
+      text-align: center;
+      float: none;
+      display: none;
+    } 
+  }
+
+  .titlebar{
+    padding: 30px;
+    margin-left: 200px;
+    background-color: #555;
+    
+  }
+  .titlebar label{
+    color: white;
+    margin:0;
+  }
+  @media screen and (max-width:700px) {
+   
+    .titlebar{
+      margin: 0;
+      margin-left: 0;
+    }    
+    .titlebar label{
+      color: white;
+      margin-left: 40%;
+    }
+  }
+  
