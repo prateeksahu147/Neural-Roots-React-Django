@@ -1,10 +1,11 @@
 
-export default class WorkspaceServices{
+//#region Get Team Member 
+export default class TeamServices {
 
-    async getSidebarDataRequest(authTokens){
+    async getTeamMember (authTokens ,username){
         var response = null
         try{
-            response = await fetch('http://127.0.0.1:8000/workspace-api/all-routes/', {
+            response = await fetch('http://127.0.0.1:8000/workspace-api/employee-list/'+username, {
                 method:'GET',
                 headers:{
                     'Content-Type':'application/json',
@@ -14,8 +15,11 @@ export default class WorkspaceServices{
         }
         catch(err) {
             response = null
-            console.error(err);
         }
         return response
-        }
+    }
+    
 }
+
+
+//#endregion

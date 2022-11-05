@@ -34,9 +34,9 @@ def getRoutes(request):
 
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticated])
+#@permission_classes([IsAuthenticated])
 def getNotes(request):
     user = request.user
     notes = user.note_set.all()
-    serializer = NoteSerializer(notes, many=True)
+    serializer = NoteSerializer(user, many=True)
     return Response(serializer.data)

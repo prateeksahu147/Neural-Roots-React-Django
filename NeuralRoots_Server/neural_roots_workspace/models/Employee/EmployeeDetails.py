@@ -26,4 +26,4 @@ class EmployeeDetails(models.Model):
     ProjectCode = models.ForeignKey(ProjectDetails, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return self.Username
+        return self.FirstName + ' ' + self.LastName
