@@ -9,12 +9,14 @@ import {AuthProvider} from './context/AuthContext';
 import Dashboard from './pages/neural-roots-workspace/DashboardPage';
 import Team from './pages/neural-roots-workspace/TeamPage';
 import "./styles/WorkspaceStyle.css";
+import Main from './pages/neural-roots-main/Main';
 
 function App() {
   return (
     <BrowserRouter>
     <AuthProvider>
       <Routes>
+        <Route element = {<Main />} path = "/"/> 
         <Route element = {<LoginPage />} path = "/login"/>  
         <Route element= {<PrivateRoute/>}>
           <Route path="workspace" element = {<Workspace />}> 

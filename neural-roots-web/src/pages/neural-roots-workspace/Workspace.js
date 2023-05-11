@@ -23,6 +23,7 @@ const Workspace = () =>
     useEffect(()=>{
         getSidebarData()
     })
+    
     let  getSidebarData = async () => {
         try
         {
